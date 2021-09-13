@@ -35,7 +35,31 @@ ORDER BY city;
 -- @block Select Customers from Birmingham
 SELECT customer_name
 FROM CodeAcademySchema.customer
-WHERE city = 'Birmingham';
+WHERE city = 'Birmingham'
+
+
+-- @block Select Customers from Birmingham or London
+SELECT customer_name
+FROM CodeAcademySchema.customer
+WHERE city = 'Birmingham'
+OR city = 'London';
+
+-- @block Select Customers from Birmingham or London
+-- SELECT customer_name
+-- FROM CodeAcademySchema.customer.             (THIS WAY ALSO WORKS)
+-- WHERE city in = ('Birmingham', 'London');
+
+
+-- @block Select Customers not from Birmingham
+SELECT customer_name, city 
+FROM CodeAcademySchema.customer
+WHERE city <> 'Birmingham'; -- ALSO WORKS !=
+
+-- @block Select Orders after 31st May 2019
+SELECT order_id
+FROM CodeAcademySchema.order
+WHERE order_date '31-05-19';
+
 
 
 
