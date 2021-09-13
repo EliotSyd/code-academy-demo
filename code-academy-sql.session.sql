@@ -124,6 +124,33 @@ LEFT JOIN CodeAcademySchema.order B ON A.customer_id = B.customer_id
 GROUP BY customer_name
 ORDER BY total_spent DESC;
 
+-- @block Return Total Order Amount by Month ( i.e Year_Month | Total_Order_Amount )
+SELECT LEFT(order_date::text, 7) order_month,
+SUM(total_amount) total_order_amount
+FROM CodeAcademySchema.order
+GROUP BY order_month
+ORDER BY order_month; 
+
+-- @block Return Total Order Amount by Month & Product (i.e Year_Month | Product_Name | Total_Order_Amount)
+SELECT LEFT(order_date::text, 7) order_month,
+SUM(total_amount) total_order_amount,
+C.product_name product
+FROM CodeAcademySchema.order A
+INNER JOIN CodeAcademySchema.order_line B ON A.order_id = B.order_id
+INNER JOIN CodeAcademySchema.product C ON B.product_id = C.product_id
+GROUP BY order_month, product;
+
+-- @block Return a List of Customers whose Orders than have not yet been dispatched (i.e Customer_Name | Date | Order_Amount)
+SELECT A.customer_name,
+B.order_date,
+B.total_amount,
+C.status_name
+FROM CodeAcademySchema.customer A
+INNER JOIN CodeAcademySchema.order B ON A.customer_id = B.customer_id
+INNER JOIN CodeAcademySchema.order_status C ON B.order_status_id  = C.order_status_id
+WHERE status_name = 'Unshipped';
+
+
 
 
 
