@@ -39,11 +39,11 @@ CREATE TABLE CodeAcademySchema.order_status (
 	status_name TEXT
 );
 
--- @block product definition
+-- @block product new
 
 CREATE TABLE CodeAcademySchema.product (
 	product_id INTEGER,
 	product_name TEXT,
 	selling_price REAL,
-	cost_price REAL
+	product_image TEXT
 );
