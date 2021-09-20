@@ -46,4 +46,4 @@ CREATE TABLE CodeAcademySchema.product (
 	product_name TEXT,
 	selling_price REAL,
 	product_image TEXT
-);
+);p

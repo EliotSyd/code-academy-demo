@@ -1,4 +1,4 @@
-INSERT INTO product (product_id,product_name,selling_price,product_image) VALUES
+INSERT INTO CodeAcademySchema.product (product_id,product_name,selling_price,product_image) VALUES
 	 (1,'Sandal',10.0,'/Sandals.jpeg'),
 	 (2,'Shoe',40.0,'/toms-casual-shoes.jpeg'),
 	 (3,'Trainer',35.0,'/Trainers.jpeg'),
@@ -9,13 +9,13 @@ INSERT INTO product (product_id,product_name,selling_price,product_image) VALUES
 	 (8,'Jumper',40.0,'/Jumper.jpeg'),
 	 (9,'Hoodie',35.0,'/Hoodie.jpeg'),
 	 (10,'Sweatshirt',35.0,'/Sweatshirt.jpeg');
-INSERT INTO product (product_id,product_name,selling_price,product_image) VALUES
+INSERT INTO CodeAcademySchema.product (product_id,product_name,selling_price,product_image) VALUES
 	 (11,'Bomber Jacket',60.0,'/Bomber Jacket.jpeg'),
 	 (12,'Denim Jacket',60.0,'/Denim Jacket.webp'),
 	 (13,'Leather Jacket',70.0,'/Leather Jacket.jpeg'),
 	 (14,'Parka Jacket',75.0,'/Parka Jacket.jpeg'),
 	 (15,'Harrington Jacket',70.0,'/Harrington Jacket.jpeg');
-INSERT INTO product (product_id,product_name,selling_price,product_image) VALUES
+INSERT INTO CodeAcademySchema.product (product_id,product_name,selling_price,product_image) VALUES
 	 (16, 'Phone Case',10.0,'/Iphone Case.jpeg'),
 	 (17, 'Portable Charger',20.0,'/Portable Charger.jpg'),
 	 (18, 'Iphone Cable',5.0,'/Iphone Cable.jpeg'),
